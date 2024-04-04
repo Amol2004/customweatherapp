@@ -1,0 +1,80 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d chrome --devtools-server-address http://127.0.0.1:9100/ --target C:\Users\amolnagare\Desktop\project\customwheterapp\lib\main.dart
+
+## exception
+
+JsonUnsupportedObjectError: Converting object to an encodable object failed: Instance of 'WipError'
+
+```
+#0      _JsonStringifier.writeObject (dart:convert/json.dart:793:7)
+#1      _JsonStringifier.writeMap (dart:convert/json.dart:874:7)
+#2      _JsonStringifier.writeJsonValue (dart:convert/json.dart:829:21)
+#3      _JsonStringifier.writeObject (dart:convert/json.dart:784:9)
+#4      _JsonStringifier.writeMap (dart:convert/json.dart:874:7)
+#5      _JsonStringifier.writeJsonValue (dart:convert/json.dart:829:21)
+#6      _JsonStringifier.writeObject (dart:convert/json.dart:784:9)
+#7      _JsonStringStringifier.printOn (dart:convert/json.dart:982:17)
+#8      _JsonStringStringifier.stringify (dart:convert/json.dart:967:5)
+#9      JsonEncoder.convert (dart:convert/json.dart:345:30)
+#10     JsonCodec.encode (dart:convert/json.dart:231:45)
+#11     jsonEncode (dart:convert/json.dart:114:10)
+#12     VmService._processRequest (package:vm_service/src/vm_service.dart:2604:22)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.16.4, on Microsoft Windows [Version 10.0.22621.3085], locale en-US)
+    • Flutter version 3.16.4 on channel stable at C:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 2e9cb0aa71 (8 weeks ago), 2023-12-11 14:35:13 -0700
+    • Engine revision 54a7145303
+    • Dart version 3.2.3
+    • DevTools version 2.28.4
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\amolnagare\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.7.5)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.7.34202.233
+    ! Unable to locate a Windows 10 SDK. If building fails, install the Windows 10 SDK in Visual Studio.
+
+[✓] Android Studio (version 2023.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.7+0-b2043.56-10550314)
+
+[✓] VS Code (version 1.86.0)
+    • VS Code at C:\Users\amolnagare\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.82.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.22621.3085]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 121.0.6167.141
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 121.0.2277.98
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 2 categories.
+```
